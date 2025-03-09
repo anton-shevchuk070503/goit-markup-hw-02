@@ -56,10 +56,9 @@ ul {
     transition: color 0.3s;
 }
 
-.nav-list li:first-child .nav-link:hover {
-    color: #404bbf;
-}
-
+.nav-list li:first-child:hover .nav-link,
+.nav-list li:first-child:focus .nav-link,
+.nav-list li:first-child .nav-link:hover,
 .nav-list li:first-child .nav-link:focus {
     color: #404bbf;
 }
