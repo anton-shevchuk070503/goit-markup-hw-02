@@ -1,5 +1,4 @@
 :root {
-    /* За потреби можна додати змінну для кольору */
     --text-color: #F4F4FD;
 }
 
@@ -88,15 +87,14 @@ ul {
     transition: color 0.3s;
 }
 
-/* Hover, focus */
-.nav-link:hover,
-.nav-link:focus {
+.nav-list li:first-child .nav-link:hover,
+.nav-list li:first-child .nav-link:focus {
     color: #404bbf;
 }
 
 /* Contacts */
 .contacts {
-    /* font-style: normal; залишимо як є */
+    font-style: normal;
 }
 
 /* Контейнер із посиланнями контактів */
@@ -113,11 +111,11 @@ ul {
     transition: color 0.3s;
     /* Можна додати відступи через margin замість gap */
     margin-right: 20px;
+    letter-spacing: 0.02em;
 }
 
-/* Hover, focus */
-.contact-link:hover,
-.contact-link:focus {
+.contacts-list .contact-link:hover,
+.contacts-list .contact-link:focus {
     color: #404bbf;
 }
 
@@ -134,17 +132,11 @@ ul {
 
 /* Заголовок героя */
 .hero-title {
-    /* За вимогами: line-height: 1.2, letter-spacing: 0.02em, color: #2e2f42 (але в hero було біле тло) 
-     Якщо строго за вимогою, змінюємо на #2e2f42, тоді текст стане темним
-     Можете або додати клас, або залишити білий, якщо хочете зберегти дизайн.
-     Тут продемонстрований варіант із #2e2f42. 
-  */
     font-size: 56px;
     font-weight: 700;
-    line-height: 1.2;
-    /* було 1.07 */
+    line-height: 1.07;
     letter-spacing: 0.02em;
-    color: #2e2f42;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
@@ -167,31 +159,23 @@ ul {
     margin-top: 20px;
 }
 
-/* При hover, focus */
-.hero-button:hover,
-.hero-button:focus {
+.hero .hero-button:hover,
+.hero .hero-button:focus {
     background-color: #404bbf;
 }
 
-/* Секція "Approach" */
 .approach {
-    /* Було padding: 96px 0; -> вилучаємо */
     margin-bottom: 20px;
-    /* Приклад */
 }
 
-/* Заголовок секції */
 .section-title {
-    /* text-align: center можна залишити */
     text-align: center;
     font-size: 36px;
     font-weight: 700;
-    line-height: 1.2;
-    /* Додаємо letter-spacing: 0.02em за потреби */
+    line-height: 1.11;
     letter-spacing: 0.02em;
-    /* color: #2e2f42, щоб відповідати вимогам */
     color: #2e2f42;
-    /* margin-bottom: 40px замінимо на margin, бо padding заборонений не був, але border-bottom теж не можна */
+    text-transform: capitalize;
     margin-bottom: 40px;
 }
 
@@ -201,32 +185,24 @@ ul {
     margin: 0;
 }
 
-/* Кожен елемент списку */
 .approach-item {
-    /* background-color: #FFFFFF, як у вимогах? Додаємо */
-    background-color: #ffffff;
-    /* Замість width чи padding можна робити margin */
+    background-color: #FFFFFF;
     margin-bottom: 20px;
-    /* text-align: center нехай залишиться, якщо хочеться */
     text-align: center;
 }
 
 /* Заголовок у кожному пункті */
 .approach-title {
-    /* Вимога: font-weight: 500, font-size: 20px, line-height: 1.2, letter-spacing: 0.02em, color #2e2f42 */
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
-    /* Якщо потрібен text-transform: capitalize */
     text-transform: capitalize;
     margin-bottom: 10px;
 }
 
-/* Параграф у кожному пункті */
 .approach-text {
-    /* Вимога: font-size: 16px, line-height: 1.5, letter-spacing: 0.02em, color: #434455 */
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -284,9 +260,7 @@ ul {
     margin-bottom: 20px;
 }
 
-/* Заголовок тієї ж секції */
 .portfolio .section-title {
-    /* Можна дублювати стилі з .section-title, або лишити як є */
     text-align: center;
     font-size: 36px;
     font-weight: 700;
@@ -296,9 +270,7 @@ ul {
     margin-bottom: 40px;
 }
 
-/* Список портфоліо */
 .portfolio-list {
-    /* Було display: flex; flex-wrap: wrap; gap: 24px; -> видаляємо */
     margin: 0;
 }
 
@@ -316,9 +288,7 @@ ul {
     margin-bottom: 10px;
 }
 
-/* Заголовок у портфоліо */
 .portfolio-title {
-    /* За вимогами подібні до approach-title: */
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -327,7 +297,6 @@ ul {
     margin-top: 10px;
 }
 
-/* Параграф у портфоліо */
 .portfolio-category {
     font-size: 16px;
     line-height: 1.5;
@@ -335,34 +304,32 @@ ul {
     color: #434455;
 }
 
-/* Футер */
 .footer {
     background-color: #2e2f42;
     color: #ffffff;
     text-align: center;
-    /* Було padding: 40px 0; -> заборонено */
     margin-top: 20px;
-    /* Замість відступу зверху */
 }
 
-/* Лого в футері */
 .footer-logo {
     font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
     font-weight: 700;
-    /* font-size: 24px лишається за бажанням, у вимогах це окремий логотип */
-    font-size: 24px;
     color: #4d5ae5;
     text-decoration: none;
 }
 
-/* Текст у футері */
 .footer-text {
+    color: var(--text-color);
+    letter-spacing: 0.02em;
     font-size: 16px;
     line-height: 1.5;
     margin-top: 10px;
-    /* Для прикладу можна використати змінну кольору:
-     color: var(--text-color);
-     але в інструкції #F4F4FD теж згадувався, за потреби: 
-     color: #F4F4FD; 
-  */
+}
+
+.footer-logo-span {
+    color: #f4f4fd;
 }
