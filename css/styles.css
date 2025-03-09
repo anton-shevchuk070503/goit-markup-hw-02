@@ -56,11 +56,11 @@ ul {
     transition: color 0.3s;
 }
 
-.nav-link:hover {
+.nav-list li:first-child .nav-link:hover {
     color: #404bbf;
 }
 
-.nav-link:focus {
+.nav-list li:first-child .nav-link:focus {
     color: #404bbf;
 }
 
@@ -205,7 +205,7 @@ ul {
     text-align: center;
     font-size: 36px;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.11;
     letter-spacing: 0.02em;
     color: #2e2f42;
     margin-bottom: 40px;
