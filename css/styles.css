@@ -2,114 +2,80 @@
     --text-color: #F4F4FD;
 }
 
-/* Загальні стилі тега body */
 body {
     font-family: 'Roboto', sans-serif;
     color: #434455;
     background-color: #ffffff;
     margin: 0;
-    /* line-height залишаємо (воно не в списку заборонених) */
     line-height: 1.5;
 }
 
 ul {
     margin: 0;
-    /* padding вилучено, щоб відповідати умові */
-    /* list-style: none лишається? За бажанням можна. */
     list-style: none;
 }
 
-/* Шапка сайту */
 .header {
-    /* display, align-items, padding, тощо – вилучено */
-    /* border-bottom: 1px solid #e7e9fc; теж під забороною (border-bottom) */
     margin-bottom: 20px;
-    /* Можна додати margin як компенсацію */
     background-color: #ffffff;
-    /* Якщо необхідна роздільна риса, замінити border-bottom
-     на загальний border, але умова забороняє border-bottom,
-     тому можна або прибрати, або використати box-shadow,
-     але box-shadow теж заборонений. Видаляємо. */
 }
 
-/* Навігаційне меню */
 .nav {
-    /* Було display: flex; align-items: center; видаляємо */
     margin: 0;
-    /* За потреби */
 }
 
-/* Логотип із вимогами */
 .logo {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    /* font-size: 24px; -> замінено на 18px */
     font-size: 18px;
-    /* line-height: 1.17; за вимогами */
     line-height: 1.17;
-    /* letter-spacing: 0.03em; за вимогами */
     letter-spacing: 0.03em;
-    /* text-transform: uppercase; за вимогами */
     text-transform: uppercase;
-    /* Прибрано margin-right, оскільки "margin" дозволено, але за потреби можна лишити */
     color: #4d5ae5;
     text-decoration: none;
     margin: 0 0 20px 0;
-    /* як приклад, аби трохи відокремити, не обов’язково */
 }
 
-/* Усередині логотипа span: колір #2e2f42 (вимога) */
 .logo-span {
     color: #2e2f42;
 }
 
-/* Список головної навігації */
 .nav-list {
-    /* Було display: flex; gap: 24px; обидва заборонені */
-    /* Можна використати margin для відступів */
     margin: 0;
 }
 
-/* Кожен li можна трохи розділити відступами */
 .nav-list li {
     margin-bottom: 10px;
-    /* Замість gap */
 }
 
-/* Посилання у навігації */
 .nav-link {
     text-decoration: none;
     color: #2e2f42;
     font-weight: 500;
-    /* Додаємо letter-spacing: 0.02em згідно з вимогою */
     letter-spacing: 0.02em;
-    /* Перехід */
     transition: color 0.3s;
 }
 
-.nav-list li:first-child .nav-link:hover,
-.nav-list li:first-child .nav-link:focus {
+.nav-link:hover {
     color: #404bbf;
 }
 
-/* Contacts */
+.nav-link:focus {
+    color: #404bbf;
+}
+
 .contacts {
     font-style: normal;
 }
 
-/* Контейнер із посиланнями контактів */
 .contacts-list {
-    /* Було display: flex; gap: 24px; видаляємо через заборону */
     margin-top: 10px;
-    /* Наприклад */
 }
 
-/* Посилання-контакти */
 .contact-link {
     text-decoration: none;
     color: #434455;
     transition: color 0.3s;
-    /* Можна додати відступи через margin замість gap */
     margin-right: 20px;
     letter-spacing: 0.02em;
 }
@@ -119,18 +85,13 @@ ul {
     color: #404bbf;
 }
 
-/* Секція hero */
 .hero {
-    /* text-align: center можна залишити */
     text-align: center;
     background-color: #2e2f42;
     color: #ffffff;
-    /* Було padding: 120px 0; -> padding заборонено, видаляємо */
     margin-bottom: 20px;
-    /* Приклад, щоб дати відступ */
 }
 
-/* Заголовок героя */
 .hero-title {
     font-size: 56px;
     font-weight: 700;
@@ -140,28 +101,24 @@ ul {
     margin-bottom: 20px;
 }
 
-/* Кнопка в hero */
 .hero-button {
-    /* Вимога: line-height: 1.5, letter-spacing: 0.04em */
     line-height: 1.5;
     letter-spacing: 0.04em;
-
-    /* Інше залишимо: */
     background-color: #4d5ae5;
     color: #ffffff;
     font-size: 16px;
     font-weight: 500;
-    /* border-radius заборонено, вилучаємо */
     border: none;
+    /* рекомендую явно прибрати рамку */
     cursor: pointer;
-    transition: background-color 0.3s;
-    /* Замість padding можна зробити margin якщо треба відступи */
-    margin-top: 20px;
 }
 
-.hero .hero-button:hover,
-.hero .hero-button:focus {
-    background-color: #404bbf;
+.hero-button:hover {
+    background-color: #404BBF;
+}
+
+.hero-button:focus {
+    background-color: #404BBF;
 }
 
 .approach {
@@ -179,9 +136,7 @@ ul {
     margin-bottom: 40px;
 }
 
-/* Список підходів */
 .approach-list {
-    /* Було display: flex; gap: ... -> не можна */
     margin: 0;
 }
 
@@ -191,7 +146,6 @@ ul {
     text-align: center;
 }
 
-/* Заголовок у кожному пункті */
 .approach-title {
     font-weight: 500;
     font-size: 20px;
@@ -210,53 +164,40 @@ ul {
     margin: 0;
 }
 
-/* Секція "Team" */
 .team {
-    /* Було background-color: #f4f4fd; залишимо */
     background-color: #f4f4fd;
-    /* Було padding: 96px 0; -> вилучаємо */
     text-align: center;
     margin-bottom: 20px;
 }
 
 .team-list {
-    /* Було display: flex; gap: 24px; -> видалено */
     margin: 0;
 }
 
-/* Елемент команди */
 .team-item {
-    /* Було width: 264px -> видалено */
     margin-bottom: 20px;
 }
 
-/* Усередині статті про члена команди */
 .team-member {
-    background-color: #ffffff;
-    /* Було padding: 20px; -> вилучено */
-    /* border-radius: 8px; -> заборонено */
+    background-color: #FFFFFF;
     margin: 0 auto;
-    /* Можна дати margin для відступів */
 }
 
-/* Ім’я члена команди */
 .team-name {
     font-size: 20px;
     font-weight: 500;
     margin-top: 20px;
-    /* line-height, letter-spacing можна додати, якщо треба */
+    line-height: 1.2;
 }
 
-/* Роль */
 .team-role {
     font-size: 16px;
     line-height: 1.5;
+    letter-spacing: 0.02em;
     color: #434455;
 }
 
-/* Секція "Portfolio" */
 .portfolio {
-    /* Було padding: 96px 0; -> вилучено */
     margin-bottom: 20px;
 }
 
@@ -274,17 +215,12 @@ ul {
     margin: 0;
 }
 
-/* Кожен пункт */
 .portfolio-item {
-    /* width: 300px; -> вилучено */
     margin-bottom: 20px;
     text-align: center;
 }
 
-/* Зображення у портфоліо */
 .portfolio-item img {
-    /* width: 100%; -> вилучаємо, оскільки width заборонено в CSS (залишили inline в HTML) */
-    /* border-radius: 8px; -> заборонено */
     margin-bottom: 10px;
 }
 
@@ -295,6 +231,17 @@ ul {
     letter-spacing: 0.02em;
     color: #2e2f42;
     margin-top: 10px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    text-transform: capitalize;
+    margin-bottom: 40px;
 }
 
 .portfolio-category {
